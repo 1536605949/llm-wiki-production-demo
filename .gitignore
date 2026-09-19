@@ -1,0 +1,57 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# ---- 虚拟环境 ----
+.venv/
+venv/
+env/
+ENV/
+
+# ---- 测试与缓存 ----
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# ---- 密钥与本地配置 ----
+.env
+.env.*
+!*.example
+!.env.example
+
+# ---- LLM-Wiki 运行时状态 ----
+# .llmwiki/ 全部是派生数据：meta.sqlite 是可重建的 FTS 索引，
+# audit.jsonl 是运行日志，workspace.lock 是进程锁。
+# 删掉它们不影响知识，因为 wiki/*.md 才是 source of truth。
+.llmwiki/
+
+# ---- 数据库文件（防止 WAL/SHM 泄漏业务数据）----
+*.db
+*.db-wal
+*.db-shm
+*.db-journal
+*.sqlite
+*.sqlite3
+*.sqlite3-wal
+*.sqlite3-shm
+
+# ---- 编辑器与系统 ----
+.idea/
+.vscode/
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+# ---- 本地 AI 助手工作区（含本地记忆，不属于项目内容）----
+.workbuddy-ai/

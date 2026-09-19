@@ -1,0 +1,9 @@
+services:
+  llmwiki:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      LLMWIKI_PROVIDER: mock
+    volumes:
+      - ./demo:/app/demo

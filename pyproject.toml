@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llm-wiki-production-demo"
+version = "0.2.0"
+description = "Runnable production-shaped LLM-Wiki reference implementation"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+web = ["fastapi>=0.115", "uvicorn>=0.30"]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+llmwiki = "llmwiki.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+# 让 `pytest` 在未执行 pip install -e . 时也能直接找到 src/ 下的包
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-q"
