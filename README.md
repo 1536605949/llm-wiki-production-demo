@@ -50,7 +50,7 @@ raw/ (不可变证据) → ingest/compile → wiki/ (持久知识) → query →
 要求 Python 3.11+。运行时**零第三方依赖**（Web UI 可选装 FastAPI）。
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/1536605949/llm-wiki-production-demo.git
 cd llm-wiki-production-demo
 
 python -m venv .venv
